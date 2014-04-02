@@ -1,8 +1,154 @@
 <html>
-<head>PIG</head>
+<head><title>tPIG</title></head>
 <body>
-<h3>Welcome to Tiare's PIG - Pt. Intake Generator</h3>
+<h3>Welcome to tPIG - Tiare's Pt. Intake Generator</h3>
+
+<form name="pt_info" method="post" action="/patients">
+  <fieldset>
+    <legend>Enter Pt. Info</legend>
+    <p>Age:
+      <input name="patient[age]" size="2"></textarea>
+      G:
+      <select name="patient[g]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+      </select>
+      P:
+      <input name="patient[p]" size="4"></textarea>
+    </p>
+
+    <p>at
+      <input name="patient[at]" size="4"></textarea>
+      .
+      <select name="patient[x]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      by
+      <input name="patient[week]" size="2"></textarea> wk
+      VS
+      <select name="patient[vs]">
+        <option value="cwd">cwd</option>
+        <option value="est">est</option>
+      </select>
+    </p>
+    <p>PNC =
+      <select name="patient[pnc]">
+        <option value="whc">whc</option>
+        <option value="cor">cor</option>
+        <option value="none">none</option>
+      </select>
+      Placenta
+      <select name="patient[placenta]">
+        <option value="ant">ant</option>
+        <option value="cor">iat</option>
+        <option value="post">post</option>
+        <option value="---">---</option>
+      </select>
+    </p>
+    <p>GBS
+      <select name="patient[gbs]">
+        <option value="unknown">unknown</option>
+        <option value="pos">pos</option>
+        <option value="neg">neg</option>
+      </select>
+      1-hr
+      <select name="patient[one_hr]">
+        <option value="unknown">unknown</option>
+        <option value="wnl">wnl</option>
+        <option value="---">---</option>
+      </select>
+      3-hr
+      <select name="patient[three_hr]">
+        <option value="wnl">wnl</option>
+        <option value="n/a">-</option>
+      </select>
+    </p>
+    <p>Hx
+      <select name="patient[hx]">
+        <option value="cs">cs</option>
+        <option value="nsvd">nsvd</option>
+      </select>
+      x
+      <select name="patient[x]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+    </p>
+    <p>
+      Largest #
+      <select name="patient[largest]">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      EFW #
+      <select name="patient[efw]">
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      by
+      <select name="patient[by_2nd]">
+        <option value="vs">vs</option>
+        <option value="palp">palp</option>
+      </select>
+    </p>
+    <p>SVE:
+      <select name="patient[sve1]">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <input name="patient[sve2]" size="3"></textarea>
+      <select name="patient[sve3]">
+        <option value="0">0</option>
+        <option value="-1">-1</option>
+        <option value="-2">-2</option>
+        <option value="-3">-3</option>
+      </select>
+    </p>
+
+    <p>Admit Comments:<br/>
+      <textarea name="patient[comment]"></textarea></p>
+
+    <p><input type="reset" value="Reset"/> <input type="submit" value="Generate!"/></p>
+  </fieldset>
+</form>
 
 </body>
-<footer></footer>
+<footer>Made with love and an Apple computer for Dr. Tiare Evans, MD</footer>
 </html>
