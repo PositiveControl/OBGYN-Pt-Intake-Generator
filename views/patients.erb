@@ -1,14 +1,16 @@
 <html>
 <head></head>
 <body>
-<p><%= patient.age %> y/o G<%= patient.g %> P<%= patient.p %><br/>
-  @<%= patient.at %> by <%= patient.week %>wk US <%= patient.us %><br/>
-  PNC = <%= patient.pnc %>. Placenta <%= patient.placenta %>.<br/>
-  GBS <%= patient.gbs %> 1-hr <%= patient.one_hr %> 3-hr <%= patient.three_hr %>.<br/>
-  Hx <%= patient.hx %> x <%= patient.x %> <br/>
-  Largest <%= patient.largest %># EFW <%= patient.efw %># by <%= patient.by_2nd %><br/>
-  SVE @ <%= patient.sve_time %> <%= patient.sve1 %>/<%= patient.sve2 %>/<%= patient.sve3 %><br/>
+<textarea name="textarea" rows="10" cols="30">
+  <%= patient.age %> y/o G<%= patient.g %> P<%= patient.p %>&#13;
+  @<%= patient.at %> by <%= patient.week %>wk US <%= patient.us %>&#13;
+  PNC = <%= patient.pnc %>. Placenta <%= patient.placenta %>.&#13;
+  GBS <%= patient.gbs %> 1-hr <%= patient.one_hr %> 3-hr <%= patient.three_hr %>.&#13;
+  Hx <%= patient.hx %> x <%= patient.x %> &#13;
+  Largest <%= patient.largest %># EFW <%= patient.efw %># by <%= patient.by_2nd %>&#13;
+  SVE @ <%= patient.sve_time %> <%= patient.sve1 %>/<%= patient.sve2 %>/<%= patient.sve3 %>&#13;
   Admit: <%= patient.comment %>
+</textarea>
 </p>
 </body>
 </html>
