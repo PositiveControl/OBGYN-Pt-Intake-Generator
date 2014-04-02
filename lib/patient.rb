@@ -1,8 +1,8 @@
 class Patient
 
-  attr_accessor :age, :g, :p, :at, :decimal, :week, :vs, :pnc,
+  attr_accessor :age, :g, :p, :at, :week, :us, :pnc,
                 :placenta, :gbs, :one_hr, :three_hr, :hx, :x,
-                :largest, :efw, :by_2nd, :sve1, :sve2, :sve3,
+                :largest, :efw, :by_2nd, :sve_time, :sve1, :sve2, :sve3,
                 :comment
 
   def initialize(options)
@@ -10,9 +10,8 @@ class Patient
     @g = options[:g]
     @p = options[:p]
     @at = options[:at]
-    @decimal = options[:decimal]
     @week = options[:week]
-    @vs = options[:vs]
+    @us = options[:us]
     @pnc = options[:pnc]
     @placenta = options[:placenta]
     @gbs = options[:gbs]
@@ -23,6 +22,7 @@ class Patient
     @largest = options[:largest]
     @efw = options[:efw]
     @by_2nd = options[:by_2nd]
+    @sve_time = options[:sve_time]
     @sve1 = options[:sve1]
     @sve2 = options[:sve2]
     @sve3 = options[:sve3]

@@ -18,38 +18,31 @@
       <input name="patient[p]" size="4"></textarea>
     </p>
 
-    <p>at
+    <p>@
       <input name="patient[at]" size="4"></textarea>
-      .
-      <select name="patient[decimal]">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
       by
       <input name="patient[week]" size="2"></textarea> wk
-      VS
-      <select name="patient[vs]">
+      US
+      <select name="patient[us]">
         <option value="cwd">cwd</option>
         <option value="est">est</option>
+        <option value="chng'd">chng'd</option>
       </select>
     </p>
     <p>PNC =
       <select name="patient[pnc]">
-        <option value="whc">whc</option>
         <option value="cor">cor</option>
+        <option value="whc">whc</option>
+        <option value="osh">osh</option>
         <option value="none">none</option>
-      </select>
+      </select>.
       Placenta
       <select name="patient[placenta]">
         <option value="ant">ant</option>
-        <option value="cor">iat</option>
+        <option value="Lat">Lat</option>
         <option value="post">post</option>
-        <option value="---">---</option>
-      </select>
+        <option value="fund">fund</option>
+      </select>.
     </p>
     <p>GBS
       <select name="patient[gbs]">
@@ -60,19 +53,19 @@
       1-hr
       <select name="patient[one_hr]">
         <option value="unknown">unknown</option>
+        <option value="abnml">abnml</option>
         <option value="wnl">wnl</option>
-        <option value="---">---</option>
       </select>
       3-hr
       <select name="patient[three_hr]">
+        <option value="n/a">-</option>
         <option value="wnl">wnl</option>
-        <option value="n/a" selected="selected">-</option>
-      </select>
+      </select>.
     </p>
     <p>Hx
       <select name="patient[hx]">
-        <option value="cs">cs</option>
         <option value="nsvd">nsvd</option>
+        <option value="c/s">c/s</option>
       </select>
       x
       <select name="patient[x]">
@@ -81,31 +74,39 @@
       </select>
     </p>
     <p>
-      Largest #
-      <select name="patient[largest]">
-        <%= partial :form_option_5_10 %>
-      </select>
-      EFW #
-      <select name="patient[efw]">
-        <%= partial :form_option_5_10 %>
-      </select>
+      Largest
+      <input name="patient[largest]" size="2"></textarea>#
+      EFW
+        <input name="patient[efw]" size="2"></textarea>#
       by
       <select name="patient[by_2nd]">
-        <option value="vs">vs</option>
+        <option value="us">vs</option>
         <option value="palp">palp</option>
       </select>
     </p>
-    <p>SVE:
+    <p>SVE @
+      <input name="patient[sve_time]" size="4"></textarea>
       <select name="patient[sve1]">
+        <option value="cl">cl</option>
         <%= partial :form_option_1_9 %>
-      </select>
-      <input name="patient[sve2]" size="3"></textarea>
+        <option value="c">c</option>
+      </select>/
+      <select name="patient[sve2]">
+        <option value="th">th</option>
+        <option value="50">-50</option>
+        <option value="60">-60</option>
+        <option value="70">70</option>
+        <option value="80">80</option>
+        <option value="90">90</option>
+        <option value="c">c</option>
+      </select>/
       <select name="patient[sve3]">
-        <option value="0">0</option>
-        <option value="-1">-1</option>
-        <option value="-2">-2</option>
         <option value="-3">-3</option>
+        <option value="-2">-2</option>
+        <option value="-1">-1</option>
+        <option value="0">0</option>
       </select>
+      <!--Add option to enter additional SVE's / Partial SVE / Make New Class for SVE-->
     </p>
 
     <p>Admit Comments:<br/>
