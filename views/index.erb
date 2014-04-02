@@ -10,7 +10,7 @@
   <fieldset>
     <legend>Enter Pt. Info</legend>
     <p>Age:
-      <input name="patient[age]" size="2"></textarea>
+      <input type="text" pattern="[0-9]*" name="patient[age]" size="2"></textarea>
       G:
       <select name="patient[g]">
         <%= partial :form_option_1_9 %>
@@ -18,13 +18,13 @@
         <option value="11">11</option>
       </select>
       P:
-      <input name="patient[p]" size="4"></textarea>
+      <input type="text" pattern="[0-9]*" name="patient[p]" size="4"></textarea>
     </p>
 
     <p>@
-      <input name="patient[at]" size="4"></textarea>
+      <input type="text" pattern="[0-9]*" name="patient[at]" size="4"></textarea>
       by
-      <input name="patient[week]" size="2"></textarea> wk
+      <input type="text" pattern="[0-9]*" name="patient[week]" size="2"></textarea> wk
       US
       <select name="patient[us]">
         <option value="cwd">cwd</option>
@@ -79,9 +79,9 @@
     </p>
     <p>
       Largest
-      <input name="patient[largest]" size="2"></textarea>#
+      <input type="text" pattern="[0-9]*" name="patient[largest]" size="2"></textarea>#
       EFW
-      <input name="patient[efw]" size="2"></textarea>#
+      <input type="text" pattern="[0-9]*" name="patient[efw]" size="2"></textarea>#
       by
       <select name="patient[by_2nd]">
         <option value="us">vs</option>
