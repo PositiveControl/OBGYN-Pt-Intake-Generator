@@ -3,6 +3,14 @@ require 'patient'
 
 class App < Sinatra::Application
 
+  helpers do
+
+    def partial template
+      erb template, :layout => false
+    end
+
+  end
+
   get '/' do
     erb :index
   end

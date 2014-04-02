@@ -10,15 +10,7 @@
       <input name="patient[age]" size="2"></textarea>
       G:
       <select name="patient[g]">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
+        <%= partial :form_option_1_9 %>
         <option value="10">10</option>
         <option value="11">11</option>
       </select>
@@ -29,7 +21,7 @@
     <p>at
       <input name="patient[at]" size="4"></textarea>
       .
-      <select name="patient[x]">
+      <select name="patient[decimal]">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -74,7 +66,7 @@
       3-hr
       <select name="patient[three_hr]">
         <option value="wnl">wnl</option>
-        <option value="n/a">-</option>
+        <option value="n/a" selected="selected">-</option>
       </select>
     </p>
     <p>Hx
@@ -84,36 +76,18 @@
       </select>
       x
       <select name="patient[x]">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
+        <%= partial :form_option_1_9 %>
         <option value="10">10</option>
       </select>
     </p>
     <p>
       Largest #
       <select name="patient[largest]">
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+        <%= partial :form_option_5_10 %>
       </select>
       EFW #
       <select name="patient[efw]">
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
+        <%= partial :form_option_5_10 %>
       </select>
       by
       <select name="patient[by_2nd]">
@@ -123,15 +97,7 @@
     </p>
     <p>SVE:
       <select name="patient[sve1]">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
+        <%= partial :form_option_1_9 %>
       </select>
       <input name="patient[sve2]" size="3"></textarea>
       <select name="patient[sve3]">
