@@ -13,4 +13,14 @@ feature 'App generates text from dropdown and form inputs' do
     click_on "Back to Input Form"
     expect(page).to have_content "Dr. T. Evans"
   end
+
+  scenario 'User is redirected to index after sending text' do
+    visit ('/')
+    fill_in "patient[at]", :with => "35.1"
+    click_on "Generate!"
+    expect(page).to have_content "35.1"
+    click_on "Send Text"
+    expect(page).to have_content "Dr. T. Evans"
+  end
+
 end
