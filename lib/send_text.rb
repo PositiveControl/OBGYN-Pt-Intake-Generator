@@ -19,7 +19,7 @@ class TextMessage
     url = URI.parse('https://www.google.com/voice/sms/send/')
     req = Net::HTTP::Post.new(url.path, {'Content-type' => 'application/x-www-form-urlencoded', 'Authorization' => 'GoogleLogin auth='+login_response.body.match("Auth\=(.*)")[0].gsub("Auth=", "")})
     # We're sending the auth token back to google
-    req.form_data = {'id' => '', 'phoneNumber' => '3036671970', 'text' => message, '_rnr_se' => 'BJQn6mVVF+L/PIvaPaaBWpGXTBY='}
+    req.form_data = {'id' => '', 'phoneNumber' => '7202893911', 'text' => message, '_rnr_se' => 'BJQn6mVVF+L/PIvaPaaBWpGXTBY='}
     con = Net::HTTP.new(url.host, url.port)
     con.use_ssl = true
     con.start { |http| response = http.request(req) }
