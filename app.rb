@@ -12,7 +12,7 @@ class App < Sinatra::Application
   end
 
   get '/' do
-    erb :index
+    erb :index, :layout => true
   end
 
   post '/patients' do

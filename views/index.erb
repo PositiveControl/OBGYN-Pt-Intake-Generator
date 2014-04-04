@@ -1,127 +1,155 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, user-scalable=no">
+
   <title>tPIG</title></head>
 <body>
-<h3>tPIG - T's Pt. Intake Generator</h3>
+<br/>
+<span class="label label-info"><h3>T's Pt. Intake Generator</h3></span>
+<br/>
+<br/>
 
-<form name="pt_info" method="post" action="/patients">
-  <fieldset>
-    <legend>Enter Pt. Info</legend>
-    <p>Age:
-      <input type="text" pattern="[0-9]*" name="patient[age]" size="2"></textarea>
-      G:
-      <select name="patient[g]">
-        <%= partial :form_option_1_9 %>
-        <option value="10">10</option>
-        <option value="11">11</option>
-      </select>
-      P:
-      <input type="text" pattern="[0-9]*" name="patient[p]" size="4"></textarea>
-    </p>
+<div class="container">
+  <form class="form-inline" method="post" action="/patients">
+    <fieldset>
+      <div class="controls">
+        <p>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[age]" placeholder="Age"></textarea>
 
-    <p>@
-      <input name="patient[at]" size="4"></textarea>
-      <!--fix above field to default to numpad WITH decimal on mobile-->
-      by
-      <input type="text" pattern="[0-9]*" name="patient[week]" size="2"></textarea> wk
-      US
-      <select name="patient[us]">
-        <option value="cwd">cwd</option>
-        <option value="est">est</option>
-        <option value="chng'd">chng'd</option>
-      </select>
-    </p>
-    <p>PNC =
-      <select name="patient[pnc]">
-        <option value="cor">cor</option>
-        <option value="whc">whc</option>
-        <option value="osh">osh</option>
-        <option value="none">none</option>
-      </select>.
-      Placenta
-      <select name="patient[placenta]">
-        <option value="ant">ant</option>
-        <option value="Lat">Lat</option>
-        <option value="post">post</option>
-        <option value="fund">fund</option>
-      </select>.
-    </p>
-    <p>GBS
-      <select name="patient[gbs]">
-        <option value="unknown">unknown</option>
-        <option value="pos">pos</option>
-        <option value="neg">neg</option>
-      </select>
-      1-hr
-      <select name="patient[one_hr]">
-        <option value="unknown">unknown</option>
-        <option value="abnml">abnml</option>
-        <option value="wnl">wnl</option>
-      </select>
-    </p>
-    <p>
-      3-hr
-      <select name="patient[three_hr]">
-        <option value="n/a">-</option>
-        <option value="wnl">wnl</option>
-      </select>.
-      Hx
-      <select name="patient[hx]">
-        <option value="nsvd">nsvd</option>
-        <option value="c/s">c/s</option>
-      </select>
-      x
-      <select name="patient[x]">
-        <%= partial :form_option_1_9 %>
-        <option value="10">10</option>
-      </select>
-    </p>
-    <p>
-      Largest
-      <input type="text" pattern="[0-9]*" name="patient[largest]" size="2"></textarea>#
-      EFW
-      <input type="text" pattern="[0-9]*" name="patient[efw]" size="2"></textarea>#
-      by
-      <select name="patient[by_2nd]">
-        <option value="us">vs</option>
-        <option value="palp">palp</option>
-      </select>
-    </p>
-    <p>SVE @
-      <input name="patient[sve_time]" size="4"></textarea>
-      <select name="patient[sve1]">
-        <option value="cl">cl</option>
-        <%= partial :form_option_1_9 %>
-        <option value="c">c</option>
-      </select>/
-      <select name="patient[sve2]">
-        <option value="th">th</option>
-        <option value="50">50</option>
-        <option value="60">60</option>
-        <option value="70">70</option>
-        <option value="80">80</option>
-        <option value="90">90</option>
-        <option value="c">c</option>
-      </select>/
-      <select name="patient[sve3]">
-        <option value="-3">-3</option>
-        <option value="-2">-2</option>
-        <option value="-1">-1</option>
-        <option value="0">0</option>
-      </select>
-      <!--Add option to enter additional SVE's / Partial SVE / Make New Class for SVE-->
-    </p>
+          <select class="input-small" name="patient[g]">
+            <option value="--">--G--</option>
+            <%= partial :form_option_1_9 %>
+            <option value="10">10</option>
+            <option value="11">11</option>
+          </select>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[p]" placeholder="P"></textarea>
+        </p>
 
-    <p>Admit Comments:<br/>
-      <textarea name="patient[comment]"></textarea></p>
+        <p>
+          <input class="input-small" name="patient[at]" placeholder="@"></textarea>
+          <!--fix above field to default to numpad WITH decimal on mobile-->
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[week]" placeholder="by"></textarea>
 
-    <p><input type="reset" value="Reset"/> <input type="submit" value="Generate!"/></p>
-  </fieldset>
-</form>
+          <select class="input-small" name="patient[us]">
+            <option value="--">--US--</option>
+            <option value="cwd">cwd</option>
+            <option value="est">est</option>
+            <option value="chng'd">chng'd</option>
+          </select>
+        </p>
+        <p>
+          <select class="input-small" name="patient[pnc]">
+            <option value="--">--PNC--</option>
+            <option value="cor">cor</option>
+            <option value="whc">whc</option>
+            <option value="osh">osh</option>
+            <option value="none">none</option>
+          </select>
 
+          <select class="input-small" name="patient[placenta]">
+            <option value="--">--Placenta--</option>
+            <option value="ant">ant</option>
+            <option value="Lat">Lat</option>
+            <option value="post">post</option>
+            <option value="fund">fund</option>
+          </select>
+
+          <select class="input-small" name="patient[gbs]">
+            <option value="--">--GBS--</option>
+            <option value="unknown">unknown</option>
+            <option value="pos">pos</option>
+            <option value="neg">neg</option>
+          </select>
+
+        </p>
+        <p>
+
+          <select class="input-small" name="patient[one_hr]">
+            <option value="--">--1hr--</option>
+            <option value="unknown">unknown</option>
+            <option value="abnml">abnml</option>
+            <option value="wnl">wnl</option>
+          </select>
+
+          <select class="input-small" name="patient[three_hr]">
+            <option value="n/a">--3hr--</option>
+            <option value="wnl">wnl</option>
+          </select>
+
+        </p>
+        <p>
+
+          <select class="input-small" name="patient[hx]">
+            <option value="--">--Hx--</option>
+            <option value="nsvd">nsvd</option>
+            <option value="c/s">c/s</option>
+          </select>
+
+          <select class="input-small" name="patient[x]">
+            <option value="--">--x--</option>
+            <%= partial :form_option_1_9 %>
+            <option value="10">10</option>
+          </select>
+
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[largest]" placeholder="Largest#"></textarea>
+
+        </p>
+        <p>
+
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[efw]" placeholder="EFW#"></textarea>
+
+          <select class="input-small" name="patient[by_2nd]">
+            <option value="--">--by--</option>
+            <option value="us">vs</option>
+            <option value="palp">palp</option>
+          </select>
+
+          <input class="input-small" name="patient[sve_time]" placeholder="SVE @"></textarea>
+
+        </p>
+        <p>
+
+          <select class="input-small" name="patient[sve1]">
+            <option value="--">--SVE--</option>
+            <option value="cl">cl</option>
+            <%= partial :form_option_1_9 %>
+            <option value="c">c</option>
+          </select>
+          <select class="input-small" name="patient[sve2]">
+            <option value="--">--SVE--</option>
+            <option value="th">th</option>
+            <option value="50">50</option>
+            <option value="60">60</option>
+            <option value="70">70</option>
+            <option value="80">80</option>
+            <option value="90">90</option>
+            <option value="c">c</option>
+          </select>
+          <select class="input-small" name="patient[sve3]">
+            <option value="--">--SVE--</option>
+            <option value="-3">-3</option>
+            <option value="-2">-2</option>
+            <option value="-1">-1</option>
+            <option value="0">0</option>
+          </select>
+
+          <!--Add modal to enter additional SVE's-->
+        </p>
+
+      </div>
+
+      <p>
+        <textarea name="patient[comment]" placeholder="Admit Comments"></textarea></p>
+
+      <p><input type="reset" class="btn btn-danger" value="Reset"/>
+        <input type="submit" class="btn btn-primary" value="Generate!"/></p>
+
+
+    </fieldset>
+  </form>
+</div>
 </body>
-<footer>Made w/ love and an Apple computer
-        for Dr. Tiare Evans, MD</footer>
+<footer>Made w/ <i class="icon-heart"></i> and an Apple computer
+  for Dr. T. Evans
+</footer>
 </html>
