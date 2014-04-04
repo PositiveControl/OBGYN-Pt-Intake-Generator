@@ -3,20 +3,28 @@
   <meta name="viewport" content="width=device-width, user-scalable=no">
 </head>
 <body>
-<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>
-  <h5>Thanks for the info, here's your results.</h5>  Edit, copy and paste into a text! :)
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h5>RESULTS! That's what I like to see!</h5> Edit, copy and paste into a text! :)
 </div>
-<textarea class="field span6" name="textarea" rows="10" cols="100">
-  <%= patient.age %> y/o G<%= patient.g %> P<%= patient.p %>
-  @<%= patient.at %> by <%= patient.week %>wk US <%= patient.us %>.
-  PNC = <%= patient.pnc %>.  Placenta <%= patient.placenta %>.
-  GBS <%= patient.gbs %>.  1-hr <%= patient.one_hr %>.  3-hr <%= patient.three_hr %>.
-  Hx <%= patient.hx %> x <%= patient.x %>.
-  Largest <%= patient.largest %>#.   EFW <%= patient.efw %># by <%= patient.by_2nd %>.
-  SVE @ <%= patient.sve_time %> <%= patient.sve1 %>/<%= patient.sve2 %>/<%=  patient.sve3 %>.
-  Admit: <%= patient.comment %>
-</textarea><br/>
+<form action="/send-text" method="post">
+  <textarea class="field span6" name="pt_results" rows="10" cols="100">
+    <%= patient.age %> y/o G<%= patient.g %> P<%= patient.p %>
+    @<%= patient.at %> by <%= patient.week %>wk US <%= patient.us %>.
+    PNC = <%= patient.pnc %>. Placenta <%= patient.placenta %>.
+    GBS <%= patient.gbs %>. 1-hr <%= patient.one_hr %>. 3-hr <%= patient.three_hr %>.
+    Hx <%= patient.hx %> x <%= patient.x %>.
+    Largest <%= patient.largest %>#. EFW <%= patient.efw %># by <%= patient.by_2nd %>.
+    SVE @ <%= patient.sve_time %> <%= patient.sve1 %>/<%= patient.sve2 %>/<%= patient.sve3 %>.
+    Admit: <%= patient.comment %>
+  </textarea>
+  <input type="submit" class="btn btn-primary" value="Send Text!"/></p> **Text sending only works for Tiare currently**<br>
+  
+</form>
+<br/>
+
 <a href="/">Back to Input Form</a>
+
 <p>Your feedback - bad or good - and feature requests<br/>
   are welcome and greatly appreciated!</p>
 </body>
