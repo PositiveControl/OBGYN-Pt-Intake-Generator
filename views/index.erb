@@ -1,11 +1,9 @@
 <html>
-
-<head>
-
-  <title>tPIG</title></head>
+<head></head>
 <body>
 <br/>
 <span class="label label-info"><h3>T's Pt. Intake Generator</h3></span>
+
 <br/>
 <br/>
 
@@ -37,6 +35,7 @@
             <option value="chng'd">chng'd</option>
           </select>
         </p>
+
         <p>
           <select class="input-small" name="patient[pnc]">
             <option value="--">--PNC--</option>
@@ -75,10 +74,8 @@
             <option value="n/a">--3hr--</option>
             <option value="wnl">wnl</option>
           </select>
-
         </p>
         <p>
-
           <select class="input-small" name="patient[hx]">
             <option value="--">--Hx--</option>
             <option value="nsvd">nsvd</option>
@@ -92,23 +89,17 @@
           </select>
 
           <input class="input-small" type="text" pattern="[0-9]*" name="patient[largest]" placeholder="Largest#"></textarea>
-
         </p>
         <p>
-
           <input class="input-small" type="text" pattern="[0-9]*" name="patient[efw]" placeholder="EFW#"></textarea>
-
           <select class="input-small" name="patient[by_2nd]">
             <option value="--">--by--</option>
             <option value="us">vs</option>
             <option value="palp">palp</option>
           </select>
-
           <input class="input-small" name="patient[sve_time]" placeholder="SVE @"></textarea>
-
         </p>
         <p>
-
           <select class="input-small" name="patient[sve1]">
             <option value="--">--SVE--</option>
             <option value="cl">cl</option>
@@ -132,24 +123,20 @@
             <option value="-1">-1</option>
             <option value="0">0</option>
           </select>
-
           <!--Add modal to enter additional SVE's-->
         </p>
-
       </div>
 
       <p>
-        <textarea name="patient[comment]" placeholder="Admit Comments"></textarea></p>
+        <textarea name="patient[comment]" placeholder="Admit Comments"></textarea>
+      </p>
 
-      <p><input type="reset" class="btn btn-danger" value="Reset"/>
-        <input type="submit" class="btn btn-primary" value="Generate!"/></p>
-
-
+      <p>
+        <input type="reset" class="btn btn-danger" value="Reset"/>
+        <input type="submit" class="btn btn-primary" value="Generate!"/>
+      </p>
     </fieldset>
   </form>
 </div>
 </body>
-<footer>Made w/ <i class="icon-heart"></i> and an Apple computer
-  for Dr. T. Evans
-</footer>
 </html>

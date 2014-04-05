@@ -11,7 +11,7 @@ feature 'App generates text from dropdown and form inputs' do
     click_on "Generate!"
     expect(page).to have_content "22 y/o"
     click_on "Back to Input Form"
-    expect(page).to have_content "Dr. T. Evans"
+    expect(page).to have_content "Dr. Evans"
   end
 
   scenario 'User is redirected to index after sending text' do
@@ -20,7 +20,7 @@ feature 'App generates text from dropdown and form inputs' do
     click_on "Generate!"
     expect(page).to have_content "35.1"
     click_on "Send Text"
-    expect(page).to have_content "Dr. T. Evans"
+    expect(page).to have_content "Dr. Evans"
   end
 
 end
