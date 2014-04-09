@@ -2,7 +2,7 @@ require 'patient'
 require 'sequel'
 require 'pg'
 
-DB = Sequel.connect('postgres://gschool_user:password@localhost/patient_repository')
+DB = Sequel.connect('postgres://ruaewdbowabkfw:-yeNSCd2mkJ7NK8j-2FIEaAXsP@ec2-54-243-50-213.compute-1.amazonaws.com/d6pkjb8c89kfe1')
 
 class PatientRepository
 
