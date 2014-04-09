@@ -13,7 +13,6 @@
       <div class="controls">
         <p>
           <input class="input-small" type="text" pattern="[0-9]*" name="patient[age]" placeholder="Age"></textarea>
-
           <select class="input-small" name="patient[g]">
             <option value="--">--G--</option>
             <%= partial :form_option_1_9 %>
@@ -24,27 +23,28 @@
         </p>
 
         <p>
-          <input class="input-small" name="patient[at]" placeholder="@"></textarea>
-          <!--fix above field to default to numpad WITH decimal on mobile-->
-          <input class="input-small" type="text" pattern="[0-9]*" name="patient[week]" placeholder="by"></textarea>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[at_weeks]" placeholder="@ Weeks"></textarea>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[at_days]" placeholder="@ Days"></textarea>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[by_weeks]" placeholder="by weeks"></textarea>
+        </p>
 
-          <select class="input-small" name="patient[us]">
+        <p>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[by_days]" placeholder="by days"></textarea>
+          <select class="input-small" name="patient[ultrasound]">
             <option value="--">--US--</option>
             <option value="cwd">cwd</option>
             <option value="est">est</option>
             <option value="chng'd">chng'd</option>
           </select>
-        </p>
-
-        <p>
-          <select class="input-small" name="patient[pnc]">
+          <select class="input-small" name="patient[prenatal_care]">
             <option value="--">--PNC--</option>
             <option value="cor">cor</option>
             <option value="whc">whc</option>
             <option value="osh">osh</option>
             <option value="none">none</option>
           </select>
-
+        </p>
+        <p>
           <select class="input-small" name="patient[placenta]">
             <option value="--">--Placenta--</option>
             <option value="ant">ant</option>
@@ -52,61 +52,60 @@
             <option value="post">post</option>
             <option value="fund">fund</option>
           </select>
-
-          <select class="input-small" name="patient[gbs]">
+          <select class="input-small" name="patient[group_b_strep]">
             <option value="--">--GBS--</option>
             <option value="unknown">unknown</option>
             <option value="pos">pos</option>
             <option value="neg">neg</option>
           </select>
-
-        </p>
-        <p>
-
-          <select class="input-small" name="patient[one_hr]">
+          <select class="input-small" name="patient[one_hr_diabetes]">
             <option value="--">--1hr--</option>
             <option value="unknown">unknown</option>
             <option value="abnml">abnml</option>
             <option value="wnl">wnl</option>
           </select>
+        </p>
 
-          <select class="input-small" name="patient[three_hr]">
+        <p>
+          <select class="input-small" name="patient[three_hr_diabetes]">
             <option value="n/a">--3hr--</option>
             <option value="wnl">wnl</option>
           </select>
-        </p>
-        <p>
-          <select class="input-small" name="patient[hx]">
+          <select class="input-small" name="patient[history]">
             <option value="--">--Hx--</option>
             <option value="nsvd">nsvd</option>
             <option value="c/s">c/s</option>
           </select>
-
-          <select class="input-small" name="patient[x]">
+          <select class="input-small" name="patient[times_delivery_type]">
             <option value="--">--x--</option>
             <%= partial :form_option_1_9 %>
             <option value="10">10</option>
           </select>
-
-          <input class="input-small" type="text" pattern="[0-9]*" name="patient[largest]" placeholder="Largest#"></textarea>
         </p>
+
         <p>
-          <input class="input-small" type="text" pattern="[0-9]*" name="patient[efw]" placeholder="EFW#"></textarea>
-          <select class="input-small" name="patient[by_2nd]">
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[largest_baby_birthed]" placeholder="Largest#"></textarea>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[estimated_fetal_weight_lbs]" placeholder="EFW (lbs)#"></textarea>
+          <input class="input-small" type="text" pattern="[0-9]*" name="patient[estimated_fetal_weight_oz]" placeholder="EFW (oz)#"></textarea>
+        </p>
+
+        <p>
+          <select class="input-small" name="patient[efw_by]">
             <option value="--">--by--</option>
             <option value="us">vs</option>
             <option value="palp">palp</option>
           </select>
-          <input class="input-small" name="patient[sve_time]" placeholder="SVE @"></textarea>
-        </p>
-        <p>
-          <select class="input-small" name="patient[sve1]">
+          <input class="input-small" name="patient[sterile_vaginal_exam_time]" placeholder="SVE @"></textarea>
+          <select class="input-small" name="patient[sve_dilation]">
             <option value="--">--SVE--</option>
             <option value="cl">cl</option>
             <%= partial :form_option_1_9 %>
             <option value="c">c</option>
           </select>
-          <select class="input-small" name="patient[sve2]">
+        </p>
+
+        <p>
+          <select class="input-small" name="patient[sve_effacement]">
             <option value="--">--SVE--</option>
             <option value="th">th</option>
             <option value="50">50</option>
@@ -116,7 +115,7 @@
             <option value="90">90</option>
             <option value="c">c</option>
           </select>
-          <select class="input-small" name="patient[sve3]">
+          <select class="input-small" name="patient[sve_station]">
             <option value="--">--SVE--</option>
             <option value="-3">-3</option>
             <option value="-2">-2</option>

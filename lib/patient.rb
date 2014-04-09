@@ -1,12 +1,12 @@
+require 'patient_repository'
+
 class Patient
 
   ATTRIBUTES = [
-      :age, :g, :p, :at, :week, :us, :pnc,
-      :placenta, :gbs, :one_hr, :three_hr, :hx, :x,
-      :largest, :efw, :by_2nd, :sve_time, :sve1, :sve2, :sve3,
-      :sve_time_2, :sve1_2, :sve2_2, :sve3_2,
-      :sve_time_3, :sve1_3, :sve2_3, :sve3_3,
-      :comment
+      :age, :g, :p, :at_weeks, :at_days, :by_weeks, :by_days, :ultrasound, :prenatal_care,
+      :placenta, :group_b_strep, :one_hr_diabetes, :three_hr_diabetes, :history, :times_delivery_type,
+      :largest_baby_birthed, :estimated_fetal_weight_lbs, :estimated_fetal_weight_oz, :efw_by,
+      :sterile_vaginal_exam_time, :sve_dilation, :sve_effacement, :sve_station, :comment, :date, :time
   ]
 
   attr_accessor *ATTRIBUTES
@@ -15,6 +15,24 @@ class Patient
     ATTRIBUTES.each do |attr|
       instance_variable_set(:"@#{attr}", options[attr])
     end
+  end
+
+  def attributes
+    attributes_to_hash
+  end
+
+  def validate
+    remove_empty_strings_from_hash
+  end
+
+  private
+
+  def attributes_to_hash
+    Hash[ATTRIBUTES.map { |name| [name, instance_variable_get("@#{name}")] }]
+  end
+
+  def remove_empty_strings_from_hash
+    attributes_to_hash.delete_if { |key, value| value == '' || value == '--' }
   end
 
 end

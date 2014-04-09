@@ -5,7 +5,7 @@ class TextMessage
 
     url = URI.parse('https://www.google.com/accounts/ClientLogin')
     login_req = Net::HTTP::Post.new(url.path)
-    login_req.form_data = {'accountType' => 'GOOGLE', 'Email' => 'twenty4play@gmail.com', 'Passwd' => 'judamang', 'service' => 'grandcentral', 'source' => 'tiare.herokuapp.com'}
+    login_req.form_data = {'accountType' => 'GOOGLE', 'Email' => 'twenty4play@gmail.com', 'Passwd' => 'password', 'service' => 'grandcentral', 'source' => 'tiare.herokuapp.com'}
     login_con = Net::HTTP.new(url.host, url.port)
     login_con.use_ssl = true
     login_con.start { |http| login_response = http.request(login_req) }
