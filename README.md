@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/PositiveControl/OBGYN-Pt-Intake-Generator.png)](https://codeclimate.com/github/PositiveControl/OBGYN-Pt-Intake-Generator)
+
 ## Tiare's Patient Intake Generator
 
 A quick and dirty web form for OB/GYNs to quickly input and generate standard patient admit info (template used by UNLV UMC resident OB/GYN physicians).
